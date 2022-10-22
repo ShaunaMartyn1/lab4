@@ -16,6 +16,7 @@ export class Create extends React.Component{
         }
         
     }
+    /*Use handlesubmit to get current value of state and adds it to the array*/
     handleSubmit(e) {
         e.preventDefault();
         console.log(`${this.state.title},
@@ -38,11 +39,10 @@ export class Create extends React.Component{
            
         })
     }
-
+    /*Use forms to add structure */
     render(){
         return(
             <div>
-            /*Use forms to add structure*/
                 <h3>Hello from Create Component</h3>
                 <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
@@ -71,7 +71,7 @@ export class Create extends React.Component{
                     />
             </div>
 
-                
+                /*Button*/
                 <input type="submit" value="Add Book" /> 
                 </form>
             </div>
