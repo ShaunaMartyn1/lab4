@@ -4,7 +4,7 @@ import React from "react";
 export class Create extends React.Component{
     constructor(){
         super();
-        this.handleSubmit = this.handleSubmit.bind(this); /*Have to bind it*/
+        this.handleSubmit = this.handleSubmit.bind(this); /*Have to bind them or it wont work*/
         this.onChangeBookTitle = this.onChangeBookTitle.bind(this);
         this.onChangeBookAuthor = this.onChangeBookAuthor.bind(this);
         this.onChangeBookCover = this.onChangeBookCover.bind(this);
@@ -42,6 +42,7 @@ export class Create extends React.Component{
     render(){
         return(
             <div>
+            /*Use forms to add structure*/
                 <h3>Hello from Create Component</h3>
                 <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
